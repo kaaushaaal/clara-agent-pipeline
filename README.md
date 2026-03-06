@@ -39,45 +39,39 @@ Supabase Storage
 The pipeline can be triggered manually or through **n8n orchestration**.
 
 ---
+```
 
 # Repository Structure
 
-```
-clara-agent-pipeline/
-
-dataset/
-  bens-electric/
-    transcript.txt
-    onboarding_transcript.txt
-    chat.txt
-
-scripts/
-  generate_memo_v1.py
-  generate_agent_v1.py
-  update_memo_v2.py
-  generate_agent_v2.py
-  generate_changelog.py
-  store_account_supabase.py
-
-  run_pipeline.py
-  run_all_accounts.py
-  pipeline_server.py
-
-outputs/
-  accounts/
-    bens-electric/
-      v1/
-        memo.json
-        agent_spec.json
-      v2/
-        memo.json
-        agent_spec.json
-
-workflows/
-  n8n_pipeline.json
-
-logs/
-  pipeline.log
+├── changelog
+│   └── bens-electric.md
+├── dataset
+│   └── bens-electric
+│       ├── chat.txt
+│       ├── onboarding_transcript.txt
+│       ├── recording.conf
+│       └── transcript.txt
+├── schemas
+│   └── account_memo_template.json
+├── scripts
+│   ├── extract_onboarding_updates.py
+│   ├── generate_agent_spec.py
+│   ├── generate_agent_v2.py
+│   ├── generate_changelog.py
+│   ├── generate_memo_v1.py
+│   ├── parse_chat.py
+│   ├── parse_onboarding.py
+│   ├── parse_transcript.py
+│   ├── pipeline_server.py
+│   ├── run_all_accounts.py
+│   ├── run_pipeline.py
+│   ├── store_account_supabase.py
+│   ├── transcribe_onboarding_audio.py
+│   └── update_memo_v2.py
+├── workflows
+│   └── My workflow.json
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -87,7 +81,7 @@ logs/
 ## 1. Clone the repository
 
 ```
-git clone <repo-url>
+git clone https://github.com/kaaushaaal/clara-agent-pipeline
 cd clara-agent-pipeline
 ```
 
@@ -112,7 +106,8 @@ venv\Scripts\activate
 ## 3. Install dependencies
 
 ```
-pip install supabase flask
+pip install -r requirements.txt
+
 ```
 
 ---
