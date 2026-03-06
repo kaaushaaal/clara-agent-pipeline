@@ -39,9 +39,10 @@ Supabase Storage
 The pipeline can be triggered manually or through **n8n orchestration**.
 
 ---
+# Repository Structure
 ```
 
-# Repository Structure
+
 
 ├── changelog
 │   └── bens-electric.md
