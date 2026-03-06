@@ -41,9 +41,6 @@ The pipeline can be triggered manually or through **n8n orchestration**.
 ---
 # Repository Structure
 ```
-
-
-
 ├── changelog
 │   └── bens-electric.md
 ├── dataset
@@ -108,7 +105,6 @@ venv\Scripts\activate
 
 ```
 pip install -r requirements.txt
-
 ```
 
 ---
