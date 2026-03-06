@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+logs/
+outputs/
+
+*.mp4
+*.m4a
+dataset/*/video*
+dataset/*/audio*
